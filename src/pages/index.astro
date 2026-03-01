@@ -40,6 +40,44 @@ const jsonLd = {
 			isPartOf: { "@id": `${siteUrl}/#website` },
 			about: { "@id": `${siteUrl}/#organization` },
 		},
+		{
+			"@type": "FAQPage",
+			"@id": `${siteUrl}/#faqpage`,
+			mainEntity: [
+				{
+					"@type": "Question",
+					name: "How do I join Florida Coast Roleplay?",
+					acceptedAnswer: {
+						"@type": "Answer",
+						text: "Join our Discord server, follow the onboarding steps in the welcome channel, and select the department you want to start in.",
+					},
+				},
+				{
+					"@type": "Question",
+					name: "Is Florida Coast Roleplay an official department?",
+					acceptedAnswer: {
+						"@type": "Answer",
+						text: "No. Florida Coast Roleplay is not affiliated with any real-world agencies. It is a Roblox roleplay community.",
+					},
+				},
+				{
+					"@type": "Question",
+					name: "Do I need experience to join Florida Coast Roleplay?",
+					acceptedAnswer: {
+						"@type": "Answer",
+						text: "No experience is required. All new members receive structured training and onboarding when they join.",
+					},
+				},
+				{
+					"@type": "Question",
+					name: "What roles are available in Florida Coast Roleplay?",
+					acceptedAnswer: {
+						"@type": "Answer",
+						text: "Available roles include law enforcement (Fort Lauderdale Police Department), fire and EMS (Broward County Fire Rescue), sheriff operations (Broward County Sheriff's Office), and civilian roleplay depending on openings and community events.",
+					},
+				},
+			],
+		},
 	],
 };
 ---
@@ -62,6 +100,9 @@ const jsonLd = {
 		<!-- Performance -->
 		<link rel="preload" as="image" href="/banner.webp" />
 
+		<!-- Sitemap -->
+		<link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
 		<!-- Icons -->
 		<link rel="icon" href="/favicon.ico" />
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -76,6 +117,7 @@ const jsonLd = {
 		<meta property="og:image:type" content="image/webp" />
 		<meta property="og:image:width" content="1200" />
 		<meta property="og:image:height" content="630" />
+		<meta property="og:image:secure_url" content={ogImage} />
 		<meta
 			property="og:image:alt"
 			content="Florida Coast Roleplay — Fort Lauderdale Police Department scene"
@@ -99,8 +141,9 @@ const jsonLd = {
 		<meta name="author" content={siteName} />
 		<meta
 			name="keywords"
-			content="Florida Coast Roleplay, Roblox RP, roleplay community, Fort Lauderdale, Broward County, law enforcement RP, fire rescue RP, EMS roleplay, Roblox roleplay server, realistic RP"
+			content="Florida Coast Roleplay, FCRP, Roblox RP, Roblox roleplay community, Roblox law enforcement roleplay, Roblox police roleplay, Fort Lauderdale Roblox, Broward County roleplay, FLPD roleplay, BCSO Roblox, fire rescue roleplay, EMS roleplay, Roblox fire department, realistic Roblox RP, Roblox roleplay server, join Roblox RP community, structured roleplay Roblox"
 		/>
+		<meta name="rating" content="general" />
 
 		<!-- JSON-LD Structured Data -->
 		<script type="application/ld+json" set:html={JSON.stringify(jsonLd)}
@@ -159,8 +202,7 @@ const jsonLd = {
 					/>
 				</div>
 				<div class="hero-overlay"></div>
-				<div class="hero-content container">
-					<p class="hero-subtitle">
+				<div class="hero-content container">			<p class="hero-subtitle">
 						A structured roleplay community set in Fort Lauderdale
 						and Broward County. Realistic departments. Dedicated
 						staff. Active operations.

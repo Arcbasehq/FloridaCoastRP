@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://floridacoast.vercel.app/sitemap-index.xml
+Sitemap: https://floridacoastrp.vercel.app/sitemap.xml
